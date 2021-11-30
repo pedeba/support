@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {Route, BrowserRouter as Router, Routes} from "react-router-dom";
+import Login from "./pages/Login/Login";
+import Footer from "./components/Footer/Footer";
+import {UserStorage} from "./UserContext";
+import Home from "./pages/Home/Home";
+import Ticket from "./pages/Ticket/Ticket"
+import TicketCreate from "./pages/TicketCreate/TicketCreate"
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Router>
+            <UserStorage>
+                <main className='AppBody'>
+                    <Routes>
+                        <Route path='/' element={<Login/>}/>
+                        <Route path='/home/:type' element={<Home/>}/>
+                        <Route path={'/ticket/:id'} element={<Ticket/>}/>
+                        <Route path={'/ticket/create'} element={<TicketCreate/>}/>
+                    </Routes>
+                </main>
+            </UserStorage>
+        </Router>
+        <Footer/>
     </div>
   );
 }

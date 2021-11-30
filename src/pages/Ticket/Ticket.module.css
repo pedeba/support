@@ -1,0 +1,74 @@
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.inputTitle {
+    font-size: 30px;
+    border: none;
+    outline-color: #05AFF2;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    font-family: monospace;
+}
+
+.inputTitle:hover {
+    background: #eee;
+    transition: 0.3s;
+}
+
+.descriptionp {
+    margin: 20px 0 10px 0;
+}
+
+.description {
+    font-size: 14px;
+    outline-color: #05AFF2;
+    border-color: #eee;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    font-family: monospace;
+    resize: none;
+}
+
+.description:hover {
+    background: #eee;
+    transition: 0.3s;
+}
+
+.selectStatus {
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    font-family: monospace;
+    background: #eee;
+    font-weight: normal;
+    padding: 10px;
+    outline: none;
+    float: left;
+}
+
+.button {
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    font-family: monospace;
+    background: rgba(255, 0, 0, 0.4);
+    font-weight: normal;
+    padding: 10px;
+    outline: none;
+    float: right;
+}
+
+.button:hover,.button:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px #db7070, 0 0 0 4px red;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.edit {
+    background: #ff3311;
+}

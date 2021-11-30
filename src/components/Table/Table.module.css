@@ -1,0 +1,15 @@
+.table {
+    width: 100%;
+    font-size: 30px;
+    font-family: monospace;
+    border: none;
+}
+
+.data{
+    text-align: right;
+}
+
+.tr:hover{
+    background: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}

@@ -1,0 +1,38 @@
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.description {
+    border: 1px solid #eee;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    background: #eee;
+    transition: 0.2s;
+    resize: none;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.description:hover,.description:focus {
+    outline: none;
+    border-color: #056CF2;
+    background: white;
+    box-shadow: 0 0 0 3px #05AFF2;
+}
+
+.label {
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: monospace;
+    margin-bottom: 40px;
+}
