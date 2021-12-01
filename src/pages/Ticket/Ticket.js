@@ -16,7 +16,7 @@ const Ticket = () => {
     const {data} = React.useContext(UserContext)
     useEffect(()=>{
         const getTicket = async () => {
-            const {url, headers} = GET_TICKETS(2)
+            const {url, headers} = GET_TICKETS(data.usuario.id)
             const response = await axios.get(url, headers)
             const tickets = response.data
             const ticket = tickets.filter(item=>item.id === Number(id))
@@ -26,13 +26,13 @@ const Ticket = () => {
             setTicket(ticket[0])
         }
         getTicket()
-    },[id])
+    },[id, data.usuario.id])
     const updateTicket = async (status) => {
         const {url, headers, body} = UPDATE_TICKET(id, {
             id: id,
             titulo: newTitle,
             descricao: newDescription,
-            id_usuario: 2,
+            id_usuario: data.usuario.id,
             lastUpdate: ticket.lastUpdate,
             status: status
         })
@@ -61,7 +61,7 @@ const Ticket = () => {
                 <p className={styles.descriptionp}>Descrição:</p>
                 <textarea className={styles.description} value={newDescription} onBlur={()=>updateTicket()} onChange={({target})=>setNewDescription(target.value)}></textarea>
             </section>
-            <Comments/>
+            <Comments id={id}/>
         </>
     )
 }

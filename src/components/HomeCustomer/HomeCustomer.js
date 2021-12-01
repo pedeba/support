@@ -11,7 +11,7 @@ const HomeCustomer = ({data}) => {
     const navigate = useNavigate()
     useEffect(()=> {
         const getTickets = async () => {
-            const {url, headers} = GET_TICKETS(2)
+            const {url, headers} = GET_TICKETS(data.usuario.id)
             const response = await axios.get(url, headers)
             const tickets = response.data
             setTickets(tickets)

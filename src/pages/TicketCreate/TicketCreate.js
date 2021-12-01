@@ -16,7 +16,7 @@ const TicketCrerate = () => {
     const createTicket = async (event) => {
         event.preventDefault()
         if (title && description) {
-            const {url, headers, body} = CREATE_TICKET({id_usuario: 2, titulo: title, status: 'A',descricao: description})
+            const {url, headers, body} = CREATE_TICKET({id_usuario: data.usuario.id, titulo: title, status: 'A',descricao: description})
             const request = await axios.post(url, body, headers)
             if (request.data) {
                 navigate('/home/C')

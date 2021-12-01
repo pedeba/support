@@ -57,3 +57,26 @@ export function DELETE_TICKET (id) {
         }
     }
 }
+
+export function GET_COMMENTS (id) {
+    return {
+        url: API_URL + `/mensagem?id_ticket=${id}`,
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        }
+    }
+}
+
+export function POST_COMMENT (body) {
+    return {
+        url: API_URL + `/mensagem`,
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        },
+        body: body
+    }
+}

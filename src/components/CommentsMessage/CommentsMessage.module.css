@@ -1,0 +1,15 @@
+.name {
+    color: #056CF2;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.message {
+    color: #000;
+    opacity: 1;
+}
+
+.comment {
+    padding: 5px;
+    margin-bottom: 30px;
+}
