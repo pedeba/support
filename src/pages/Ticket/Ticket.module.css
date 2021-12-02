@@ -50,6 +50,10 @@
     float: left;
 }
 
+button.ativo {
+    display: block;
+}
+
 .button {
     font-size: 14px;
     border-radius: 10px;
@@ -60,6 +64,7 @@
     padding: 10px;
     outline: none;
     float: right;
+    color: white;
 }
 
 .button:hover,.button:focus{

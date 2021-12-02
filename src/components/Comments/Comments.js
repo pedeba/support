@@ -38,7 +38,7 @@ const Comments = ({id}) => {
                     <textarea placeholder="Deixe seu comentário..." className={styles.comment} value={newComment} onChange={({target})=>setNewComment(target.value)}></textarea>
                     <button onClick={()=>postComment()} className={styles.button}>Enviar</button>
                 </div>
-                {comments.length? <CommentsMessage comments={comments}/> : 'Sem comentários.'}
+                {comments.length? <CommentsMessage getTickets={getTickets} data={data} comments={comments}/> : 'Sem comentários.'}
             </div>
         </section>
     )

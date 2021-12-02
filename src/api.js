@@ -80,3 +80,37 @@ export function POST_COMMENT (body) {
         body: body
     }
 }
+
+export function GET_TICKETS_ALL () {
+    return {
+        url: API_URL + `/ticket/all`,
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        }
+    }
+}
+
+
+export function DELETE_COMMENT (id) {
+    return {
+        url: API_URL + `/mensagem/${id}`,
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        }
+    }
+}
+
+export function GET_TICKETSA (id) {
+    return {
+        url: API_URL + `/ticket/${id}`,
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+        }
+    }
+}

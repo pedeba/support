@@ -3,10 +3,6 @@
     margin: auto;
 }
 
-.div {
-    background: #ff3311;
-}
-
 .info{
     display: inline-block;
     float: left;
@@ -16,4 +12,5 @@
 .info p{
     display: inline-block;
     margin-right: 10px;
+    margin-bottom: 40px;
 }

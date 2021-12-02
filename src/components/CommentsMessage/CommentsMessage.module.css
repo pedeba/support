@@ -4,12 +4,46 @@
     margin-bottom: 4px;
 }
 
+.text {
+    float: left;
+}
+
 .message {
     color: #000;
     opacity: 1;
 }
 
+.ativo {
+    display: block;
+}
+
 .comment {
     padding: 5px;
     margin-bottom: 30px;
+    width: 900px;
+    position: relative;
+    margin-bottom: 90px;
+}
+
+.button {
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    font-family: monospace;
+    background: rgba(255, 0, 0, 0.4);
+    font-weight: normal;
+    padding: 10px;
+    outline: none;
+    margin-top: 5px;
+    float: right;
+    color: white;
+    position: absolute;
+    left: 830px;
+}
+
+.button:hover,.button:focus{
+    outline: none;
+    box-shadow: 0 0 0 3px #db7070, 0 0 0 4px red;
+    transition: 0.3s;
+    cursor: pointer;
 }
