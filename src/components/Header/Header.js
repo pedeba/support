@@ -10,14 +10,14 @@ const Header = ({type}) => {
                     <ul>
                         {type === 'att'?
                             <>
-                                <li>Meus Tickets</li>
-                                <li>Sair</li>
+                                <Link style={{display: 'inline-block', color: 'white', fontSize: 20, fontFamily: 'monospace', fontWeight: 'bold', marginLeft: 30}} to="/home/A"><li>Meus Tickets</li></Link>
+                                <Link style={{display: 'inline-block', color: 'white', fontSize: 20, fontFamily: 'monospace', fontWeight: 'bold', marginLeft: 30}} to="/"><li>Sair</li></Link>
                             </>
                             :
                             <>
-                                <li>Criar Ticket</li>
-                                <li>Meus Tickets</li>
-                                <li>Sair</li>
+                                <Link to="/ticket/create" style={{display: 'inline-block', color: 'white', fontSize: 20, fontFamily: 'monospace', fontWeight: 'bold', marginLeft: 30}}><li>Criar Ticket</li></Link>
+                                <Link to="/home/C" style={{display: 'inline-block', color: 'white', fontSize: 20, fontFamily: 'monospace', fontWeight: 'bold', marginLeft: 30}}>Meus Tickets</Link>
+                                <Link to="/" style={{display: 'inline-block', color: 'white', fontSize: 20, fontFamily: 'monospace', fontWeight: 'bold', marginLeft: 30}}><li>Sair</li></Link>
                             </>
                         }
                     </ul>
